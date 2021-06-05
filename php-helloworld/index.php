@@ -1,5 +1,5 @@
 <?php
-print "Hola mundo! php is " . PHP_VERSION . "\n";
+print "Hello mundo! php is " . PHP_VERSION . "\n";
 
 $db_host = getenv('DB_HOST');
 $db_user = getenv('DB_USER');
