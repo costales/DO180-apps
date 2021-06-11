@@ -1,14 +1,12 @@
 <?php
-print "Hello2 mundo! php is " . PHP_VERSION . "\n";
+print "Hello2 mundo! php is " . PHP_VERSION . "\n\n";
 
-echo 'Database user is: ' .$_ENV["MYSQL_USER"] . "\n";
-
-echo "Conectando BBDD...\n";
-$db_handle = pg_connect("host=postgresql dbname=items user=user1 password=mypa55");
+echo "Conectando BBDD...\n\n";
+$db_handle = pg_connect("host=".$_ENV["POSTGREESQL_HOST"]." dbname=".$_ENV["POSTGREESQL_DATABASE"]." user=".$_ENV["POSTGREESQL_USER"]." password"=.$_ENV["POSTGREESQL_PASSWORD"]);
 if ($db_handle) {
-echo 'Connection attempt succeeded.\n';
+echo 'Connection attempt succeeded.\\nn';
 } else {
-echo 'Connection attempt failed.\n';
+echo 'Connection attempt failed.\\nn';
 }
 pg_close($db_handle);
 echo "FIN BBDD...\n";
