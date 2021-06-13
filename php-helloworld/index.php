@@ -1,5 +1,5 @@
 <?php
-print "Hello mundo! php is " . PHP_VERSION . "\n\n";
+print "Hello mundo 2! php is " . PHP_VERSION . "\n\n";
 
 echo "Conectando BBDD... ";
 $db_handle = pg_connect("host=".$_ENV["HOST"]." dbname=".$_ENV["DATABASE"]." user=".$_ENV["USER"]." password=".$_ENV["PASSWORD"]);
